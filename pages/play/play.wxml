@@ -1,7 +1,26 @@
 <view class='audio-cover-wrapper'>
-  <image class='audio-cover img-rotate' src="{{src}}"></image>
+  <view class='audio-record'>
+    <image class='audio-cover img-rotate' src="{{src}}"></image>
+  </view>
 </view>
 
 <view class='audio-wrapper'>
-  WEBVIEW
+  <view></view>
+  <view class='audio-btn-wrapper'>
+    <view class='audio-btn-view play-type-view'>
+      <button class='audio-btn'></button>
+    </view>
+    <view class='audio-btn-view play-prev-view'>
+      <button class='audio-btn'></button>
+    </view>
+    <view class='audio-btn-view play-audio-view'>
+      <button class='audio-btn'></button>
+    </view>
+    <view class='audio-btn-view play-next-view'>
+      <button class='audio-btn'></button>
+    </view>
+    <view class='audio-btn-view music-items-view'>
+      <button class='audio-btn'></button>
+    </view>
+  </view>
 </view>
