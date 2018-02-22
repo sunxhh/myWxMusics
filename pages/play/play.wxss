@@ -80,29 +80,36 @@
   border: 0px solid #fff;
 }
 
-.play-type-view .audio-btn {
+.play-type-btn.audio-btn {
   background-position-x: -301px;
   background-position-y: 278px;
 }
 
-.play-prev-view .audio-btn {
+.play-prev-btn.audio-btn {
   background-position-x: -298px;
   background-position-y: 490px;
 }
 
-.play-audio-view .audio-btn {
+.pause-audio-btn.audio-btn {
   height: 42px;
   width: 42px;
   background-position-x: -301px;
   background-position-y: 414px;
 }
 
-.play-next-view .audio-btn {
+.play-audio-btn.audio-btn {
+  height: 42px;
+  width: 42px;
+  background-position-x: -301px;
+  background-position-y: 453px;
+}
+
+.play-next-btn.audio-btn {
   background-position-x: -378px;
   background-position-y: 490px;
 }
 
-.music-items-view .audio-btn {
+.music-items-btn.audio-btn {
   width: 64px;
   background-position-x: -345px;
   background-position-y: 523px;

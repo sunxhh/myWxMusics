@@ -1,33 +1,15 @@
-var audio = {
-  innerAudioContext: wx.createInnerAudioContext(),
-  init: function () {
-    this.bind();
-  },
-  bind: function () {
-    let innerAudioContext = this.innerAudioContext;
-
-    innerAudioContext.onPlay(() => {
-      console.log('开始播放')
-    });
-
-    innerAudioContext.onError((res) => {
-      console.log(res.errMsg)
-      console.log(res.errCode)
-    });
-  },
-  setSrc: function (src) {
-    innerAudioContext.src = src;
-  }
-
-}
-
+var audio = require('../../common/audio.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    src:"/img/bg.png"
+    src: "/img/bg.png",
+    audioData: {
+      playing: false
+    }
+
   },
 
   /**
@@ -41,49 +23,21 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    audio.init();
-
+    audio.musicList = ['/music/dylanf.mp3'];
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  playAudio: function (e) {
+    let audioData = this.data.audioData;
+    if (audioData.playing) {
+      this.setData({
+        "audioData.playing": false
+      })
+      audio.pause();
+    } else {
+      this.setData({
+        "audioData.playing": true
+      })
+      audio.play();
+    }
+    console.log(audioData.playing)
   }
 })

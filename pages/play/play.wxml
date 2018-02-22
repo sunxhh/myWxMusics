@@ -7,20 +7,20 @@
 <view class='audio-wrapper'>
   <view></view>
   <view class='audio-btn-wrapper'>
-    <view class='audio-btn-view play-type-view'>
-      <button class='audio-btn'></button>
+    <view class='audio-btn-view'>
+      <button class='audio-btn play-type-btn'></button>
     </view>
-    <view class='audio-btn-view play-prev-view'>
-      <button class='audio-btn'></button>
+    <view class='audio-btn-view'>
+      <button class='audio-btn play-prev-btn'></button>
     </view>
-    <view class='audio-btn-view play-audio-view'>
-      <button class='audio-btn'></button>
+    <view class='audio-btn-view'>
+      <button class="audio-btn {{audioData.playing?'play-audio-btn':'pause-audio-btn'}}" bindtap="playAudio"></button>
     </view>
-    <view class='audio-btn-view play-next-view'>
-      <button class='audio-btn'></button>
+    <view class='audio-btn-view'>
+      <button class='audio-btn play-next-btn'></button>
     </view>
-    <view class='audio-btn-view music-items-view'>
-      <button class='audio-btn'></button>
+    <view class='audio-btn-view'>
+      <button class='audio-btn music-items-btn'></button>
     </view>
   </view>
 </view>
