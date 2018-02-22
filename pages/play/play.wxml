@@ -1,0 +1,7 @@
+<view class='audio-cover-wrapper'>
+  <image class='audio-cover img-rotate' src="{{src}}"></image>
+</view>
+
+<view class='audio-wrapper'>
+  WEBVIEW
+</view>

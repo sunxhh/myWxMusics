@@ -1,0 +1,41 @@
+.audio-cover-wrapper {
+  position: absolute;
+  bottom: 60px;
+  top: 0px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #cceed0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.audio-cover {
+  width: 250px;
+  height: 250px;
+  border-radius: 250px;
+  transform: rotate(9deg);
+}
+
+.img-rotate {
+  animation: rotateFn 10s linear infinite;
+}
+
+@keyframes rotateFn {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.audio-wrapper {
+  position: absolute;
+  bottom: 0px;
+  height: 60px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #dbdbdb;
+}
