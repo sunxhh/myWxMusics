@@ -7,9 +7,16 @@ Page({
   data: {
     src: "/img/bg.png",
     audioData: {
-      playing: false
+      playing: false,
+      currentTime: 20,
+      totalTime: 60
+    },
+    processData: {
+      percent: 40,
+      strokeWidth: 4,
+      activeColor: "red",
+      backgroundColor: "gray"
     }
-
   },
 
   /**

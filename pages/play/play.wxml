@@ -5,7 +5,16 @@
 </view>
 
 <view class='audio-wrapper'>
-  <view></view>
+  <view class='audio-progress-wrapper'>
+    <text class='audio-progress-current-time'>{{audioData.totalTime}}</text>
+    <movable-area class='audio-progress-outter'>
+      <progress class='audio-progress' percent="{{processData.percent}}" stroke-width="{{processData.strokeWidth}}" activeColor="{{processData.activeColor}}" backgroundColor="{{processData.backgroundColor}}" />
+      <movable-view class='process-movable-btn' x="{{processData.percent}}" direction="horizontal">
+        <text></text>
+      </movable-view>
+    </movable-area>
+    <text class='audio-progress-total-time'>{{audioData.currentTime}}</text>
+  </view>
   <view class='audio-btn-wrapper'>
     <view class='audio-btn-view'>
       <button class='audio-btn play-type-btn'></button>

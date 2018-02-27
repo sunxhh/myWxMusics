@@ -48,7 +48,7 @@
   height: 100px;
   width: 100%;
   overflow: hidden;
-  background-color: #dbdbdb;
+  background-color: #333;
 }
 
 .audio-btn-wrapper {
@@ -113,4 +113,54 @@
   width: 64px;
   background-position-x: -345px;
   background-position-y: 523px;
+}
+
+.audio-progress-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+}
+
+.audio-progress-outter {
+  width: 80%;
+  margin: 0 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  height: 14px;
+}
+
+.audio-progress {
+  position: absolute;
+  top: 5px;
+  width: 100%;
+}
+
+.audio-progress-current-time {
+  width: 10%;
+  font-size: 10px;
+  text-align: right;
+  color: #fff;
+}
+
+.audio-progress-total-time {
+  width: 10%;
+  font-size: 10px;
+  color: #fff;
+}
+
+.process-movable-btn {
+  height: 14px;
+  width: 14px;
+  background-color: #fff;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.process-movable-btn text{
+  width: 3px;
+  height: 3px;
+  background-color: red;
 }
