@@ -1,10 +1,26 @@
+.audio-bg-wrapper {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  overflow: auto;
+  filter: blur(20px);
+}
+
+.audio-bg-img {
+  width: 100%;
+  height: 100%;
+}
+
 .audio-cover-wrapper {
   position: absolute;
   bottom: 100px;
   top: 0px;
   width: 100%;
   overflow: hidden;
-  background-color: #cceed0;
+  /* background-color: #cceed0; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,7 +64,7 @@
   height: 100px;
   width: 100%;
   overflow: hidden;
-  background-color: #333;
+  /* background-color: #333; */
 }
 
 .audio-btn-wrapper {
@@ -58,7 +74,7 @@
   width: 100%;
   overflow: hidden;
   bottom: 0px;
-  background-color: #333;
+  /* background-color: #333; */
   align-items: center;
 }
 
@@ -159,7 +175,8 @@
   justify-content: center;
   align-items: center;
 }
-.process-movable-btn text{
+
+.process-movable-btn text {
   width: 3px;
   height: 3px;
   background-color: red;

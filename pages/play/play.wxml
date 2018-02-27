@@ -1,3 +1,6 @@
+<view class='audio-bg-wrapper'>
+  <image class='audio-bg-img' src="{{src}}"></image>
+</view>
 <view class='audio-cover-wrapper'>
   <view class='audio-record'>
     <image class='audio-cover img-rotate' src="{{src}}"></image>
