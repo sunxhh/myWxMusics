@@ -141,10 +141,10 @@
 .audio-progress-outter {
   width: 80%;
   margin: 0 10px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   overflow: hidden;
   position: relative;
-  height: 14px;
+  height: 20px;
 }
 
 .audio-progress {
@@ -180,4 +180,8 @@
   width: 3px;
   height: 3px;
   background-color: red;
+}
+.audio-bar-canvas{
+  height: 20px;
+  width: 100%;
 }
