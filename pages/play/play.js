@@ -3,16 +3,20 @@ var audio = require('../../common/audio.js');
 var canvasObj = {
   processData: {
     percent: 40,
-    strokeWidth: 4,
-    activeColor: "red",
-    backgroundColor: "gray"
+    strokeWidth: 4
   },
   canvasRect: {},
   canvasContext: null,
   config: {
     strokeWidth: 4,
     activeColor: "red",
-    backgroundColor: "gray"
+    backgroundColor: "gray",
+    btn: {
+      radius: 7,
+      bgColor: "#ffffff",
+      pointColor: "red",
+      pointRadius: 2
+    }
   },
   getCanvasRect: function () {
     var canvasView = wx.createSelectorQuery().select('#audioBarCanvas');
@@ -26,14 +30,18 @@ var canvasObj = {
     }).exec();
   },
   draw: function () {
+    var ctx = this.canvasContext;
     this.drawBgBar();
     this.drawActiveBar();
+    this.drawBtn();
+    ctx.draw()
   },
   drawBgBar: function () {
     var ctx = this.canvasContext;
     var canvasRect = this.canvasRect;
     var config = this.config;
     var startY = (canvasRect.height - config.strokeWidth) / 2;
+    ctx.beginPath();
     ctx.setFillStyle(config.backgroundColor);
     var point = {
       x0: 0,
@@ -41,21 +49,39 @@ var canvasObj = {
     }
     console.log(point)
     ctx.fillRect(point.x0, point.y0, canvasRect.width, config.strokeWidth);
-    ctx.draw()
   },
   drawActiveBar: function () {
     var ctx = this.canvasContext;
     var canvasRect = this.canvasRect;
     var config = this.config;
     var startY = (canvasRect.height - config.strokeWidth) / 2;
+    ctx.beginPath();
     ctx.setFillStyle(config.activeColor);
     var point = {
       x0: 0,
       y0: startY
     }
     console.log(point)
-    ctx.fillRect(point.x0, point.y0, canvasRect.width*0.4, config.strokeWidth);
-    ctx.draw()
+    ctx.fillRect(point.x0, point.y0, canvasRect.width * 0.4, config.strokeWidth);
+  },
+  drawBtn: function () {
+    var ctx = this.canvasContext;
+    var canvasRect = this.canvasRect;
+    var config = this.config;
+    var point = {
+      x: 0,
+      y: canvasRect.height / 2
+    };
+    ctx.beginPath();
+    ctx.arc(point.x + config.btn.radius, point.y, config.btn.radius, 0, 2 * Math.PI);
+    ctx.setFillStyle(config.btn.bgColor);
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(point.x + config.btn.radius, point.y, config.btn.pointRadius, 0, 2 * Math.PI);
+    ctx.setFillStyle(config.btn.pointColor);
+    ctx.fill();
+
   },
   init: function () {
     this.getCanvasRect();
