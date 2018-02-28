@@ -52,7 +52,6 @@
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
@@ -181,7 +180,8 @@
   height: 3px;
   background-color: red;
 }
-.audio-bar-canvas{
+
+.audio-bar-canvas {
   height: 20px;
   width: 100%;
 }
