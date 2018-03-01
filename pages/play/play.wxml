@@ -9,11 +9,11 @@
 
 <view class='audio-wrapper'>
   <view class='audio-progress-wrapper'>
-    <text class='audio-progress-current-time' id="text-test">{{audioData.totalTime}}</text>
+    <text class='audio-progress-current-time' id="text-test">{{audioData.currentTime}}</text>
     <view class='audio-progress-outter' >
       <canvas class='audio-bar-canvas' id="audioBarCanvas" canvas-id="audio_bar_canvas" bindtouchend="setProgressEnd" bindtouchstart="setProgressStart" bindtouchmove="setProgressMove" />
     </view>
-    <text class='audio-progress-total-time'>{{audioData.currentTime}}</text>
+    <text class='audio-progress-total-time'>{{audioData.totalTime}}</text>
   </view>
   <view class='audio-btn-wrapper'>
     <view class='audio-btn-view'>
