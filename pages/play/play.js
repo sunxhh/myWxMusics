@@ -31,17 +31,16 @@ var canvasObj = {
         let prowidth = x - config.margin;
         let width = canvasRect.width - 2 * config.margin;
         let pecent = prowidth / width;
-        if (pecent < 0) {
-            pecent = 0;
-        }
-        if (pecent > 1) {
-            pecent = 1;
-        }
-        audio.seekByPecent(pecent);
-        this.setProcess();
+        this.setProcess(pecent);
     },
     setProcess: function(pecent) {
+        if (pecent < 0) {
+            pecent = 0;
+        } else if (pecent > 1) {
+            pecent = 1;
+        }
         this.processData.percent = pecent;
+        audio.seekByPecent(pecent);
         this.draw();
     },
     getCanvasRect: function() {
