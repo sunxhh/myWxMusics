@@ -1,0 +1,10 @@
+/.metadata/
+/.idea/
+/.recommenders/
+/node_modules/
+/views/
+/.git/
+/.vscode/
+/dist/
+/music/
+
